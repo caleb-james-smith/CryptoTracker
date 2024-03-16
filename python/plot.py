@@ -2,6 +2,7 @@
 
 import matplotlib.pyplot as plt
 
+# Create scatter plot
 def plot_scatter(output_name, x_values, y_values, title, x_label, y_label):
     # create plot
     print(f" - Creating plot: {output_name}")
@@ -17,5 +18,4 @@ def plot_scatter(output_name, x_values, y_values, title, x_label, y_label):
     plt.savefig(output_png, bbox_inches='tight')
     plt.savefig(output_pdf, bbox_inches='tight')
     plt.close('all')
-
 
