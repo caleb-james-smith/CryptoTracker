@@ -2,11 +2,14 @@
 
 import matplotlib.pyplot as plt
 
-# Create scatter plot
-def plot_scatter(output_name, x_values, y_values, title, x_label, y_label):
+# Create plot
+def plot(output_name, x_values, y_values, title, x_label, y_label, scatter=True):
     # create plot
     print(f" - Creating plot: {output_name}")
-    plt.scatter(x_values, y_values)
+    if scatter:
+        plt.scatter(x_values, y_values)
+    else:
+        plt.plot(x_values, y_values)
     plt.title(title)
     plt.xlabel(x_label)
     plt.ylabel(y_label)

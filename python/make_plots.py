@@ -52,7 +52,7 @@ def makePlots(plot_dir):
         # include the end year
         x_values    = np.arange(start_year, end_year + 1)
         y_values    = getPriceOverYears(coin, currency, start_year, end_year)
-        plot.plot_scatter(output_name, x_values, y_values, title, x_label, y_label)
+        plot.plot(output_name, x_values, y_values, title, x_label, y_label, scatter=False)
         
         # plot price vs quarters
         output_name = f"{plot_dir}/price_{coin}_in_{currency}_vs_quarters"
@@ -63,7 +63,7 @@ def makePlots(plot_dir):
         # only inclue the first quarter of the end year
         x_values    = np.arange(start_year, end_year + 0.25, 0.25)
         y_values    = getPriceOverQuarters(coin, currency, start_year, end_year)
-        plot.plot_scatter(output_name, x_values, y_values, title, x_label, y_label)
+        plot.plot(output_name, x_values, y_values, title, x_label, y_label, scatter=False)
 
 def main():
     print("It's go time.")
